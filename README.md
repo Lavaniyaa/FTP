@@ -1,3 +1,3 @@
 # FTP
 
-FTP parser using BINPAc, testing in bro
+FTP parser using BINPAC, testing in bro

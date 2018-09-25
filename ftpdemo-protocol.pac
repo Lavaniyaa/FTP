@@ -10,11 +10,15 @@
 type FTPDEMO_PDU(is_orig: bool) = case is_orig of {
 	true  ->	request_line:	FTP_Request;
 	false ->	reply_line  :   FTP_Reply;
-} &byteorder=bigendian;
+
+}&let{
+  nv  = true;
+}&byteorder=bigendian;
 type FTP_Request = record {
 	request: bytestring &restofdata;
 };
 type FTP_Reply = record {
 	reply: bytestring &restofdata;
 };
+
 
